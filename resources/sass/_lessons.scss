@@ -1,0 +1,295 @@
+.form-search {
+    max-width: 51.38rem;
+    margin: auto;
+    display: flex;
+    margin-top: 0.4rem;
+    margin-bottom: 10.19rem;
+    @include respond(phone) {
+        display: block;
+    }
+    .form-control:focus {
+        box-shadow: none;
+    }
+    .form-control,
+    .input-group,
+    .dropdown-toggle {
+        height: 3.575rem;
+        border-radius: 0;
+        text-transform: capitalize;
+        font-size: 16px !important;
+        @include respond(phone) {
+            height: 4.575rem;
+        }
+
+        .input-group-text {
+            border-radius: 0;
+            font-size: 16px;
+            @include respond(phone) {
+                font-size: 16px;
+            }
+        }
+    }
+    .input-group input {
+        @include respond(phone) {
+            font-size: 16px;
+        }
+    }
+    .dropdown-toggle:hover {
+        color: $white;
+    }
+    .dropdown {
+        margin-left: 0.6875rem;
+        @include respond(phone) {
+            margin-top: 10px;
+        }
+    }
+    .dropdown-toggle {
+        background: #0e1810 0% 0% no-repeat padding-box;
+        box-shadow: 0px 12px 24px #00000029;
+        border: 1px solid #0e1810;
+        border-radius: 0;
+        color: $white;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(phone) {
+            font-size: 16px;
+        }
+    }
+    .dropdown-menu {
+        // padding: 5px;
+        .form-check {
+            display: flex;
+            position: unset;
+            margin-right: 10px;
+            @include respond(phone) {
+                align-items: center;
+            }
+            margin-bottom: 5px;
+            & .form-check-input {
+                margin-top: 0 !important;
+                position: unset !important;
+                @include respond(phone) {
+                    width: 25px;
+                }
+            }
+            & .form-check-label {
+                margin-left: 5px !important;
+                text-transform: uppercase;
+                white-space: nowrap;
+                @include respond(phone) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .topic {
+        width: 10.31rem;
+        background: #0e1810;
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+    .sort {
+        width: 9rem;
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+}
+.lesson-container {
+    max-width: 106.8rem;
+    margin: auto;
+    margin-bottom: 5.688rem;
+    p {
+        width: 4.5rem;
+        z-index: 9;
+        position: absolute;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -20px;
+        left: -20px;
+        background: $dark-gray 0% 0% no-repeat padding-box;
+        box-shadow: 0px 10px 24px #00000029;
+        border-radius: 50px;
+        & span {
+            color: $white;
+            font: normal normal 600 2.688rem/3.813rem $fira-sans;
+            letter-spacing: 0px;
+            z-index: 9;
+        }
+        // &::before {
+        //     content: "";
+        //     height: 32vh;
+        //     color: $black;
+        //     display: block;
+        //     position: absolute;
+        //     z-index: 1;
+        //     left: 18px;
+        //     top: 0;
+        //     bottom: 0;
+        //     border: 5px dashed #0e1810;
+        //     border-width: 0 0 0 5px;
+        // }
+    }
+    // .last-pseudo {
+    //     &::before {
+    //         display: none !important;
+    //     }
+    // }
+    .video {
+        position: relative;
+        max-width: 30.38rem;
+        max-height: 14.69rem;
+        margin: 0;
+        display: inline-block;
+        margin-top: 0;
+        @include respond(phone) {
+            max-width: 37.38rem;
+            max-height: 17.69rem;
+        }
+        & video {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .lesson-info {
+        margin-left: 3.125rem;
+        .title {
+            font: normal normal 600 2.813rem/4rem $fira-sans;
+            letter-spacing: 0px;
+            color: $dark-gray;
+            margin-bottom: 0;
+        }
+        .date,
+        .duration-views {
+            font: normal normal normal 2.188rem/3.063rem $fira-sans;
+            letter-spacing: 0px;
+            color: $dark-green;
+            margin-left: 2.313rem;
+            @include respond(phone) {
+                display: none;
+            }
+        }
+        .description {
+            font: normal normal normal 2.5rem/3.563rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+            text-align: left;
+            @include respond(phone) {
+                text-align: center;
+            }
+        }
+        .begin-lesson {
+            background: $dark-green 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #00000029;
+            border: 4px solid $dark-green;
+            font: normal normal bold 1.625rem/2.313rem $fira-sans;
+            letter-spacing: 0px;
+            border-radius: 16px;
+            color: $white;
+            padding: 0.625rem 1.875rem;
+            display: flex;
+            @include respond(phone) {
+                display: inline-block;
+            }
+        }
+    }
+}
+.video {
+    width: 61rem;
+    height: 34.5rem;
+    margin: auto;
+    display: inline-block;
+    margin-top: 1.625rem;
+    margin-bottom: 2.563rem;
+    @include respond(phone) {
+        max-width: 61rem;
+        max-height: 34.5rem;
+        width: 100%;
+        height: 100%;
+    }
+    & video {
+        height: 100%;
+        width: 100%;
+    }
+    & img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.action-btns {
+    max-width: 61rem;
+    margin: auto;
+    & a:not(:last-child) {
+        margin-right: 1.25rem;
+    }
+}
+.start-btn {
+    margin: auto;
+    margin-top: 2.375rem;
+    margin-bottom: 5.563rem;
+    width: fit-content;
+}
+.lesson-start-container {
+    max-width: 82.69rem;
+    margin: auto;
+    .lesson-information {
+        text-align: left;
+        & h1 {
+            font: normal normal 600 3.125rem/4.438rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+        & span {
+            font: normal normal normal 1.875rem/2.688rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+    }
+}
+.lesson-navigation {
+    max-width: 110.9rem !important;
+    margin: auto;
+    justify-content: flex-start;
+}
+.delete-lesson {
+    color: #000;
+    text-decoration: underline;
+    font: normal normal normal 1.563rem/2.25rem "Fira Sans", sans-serif;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+    .lesson-navigation,
+    .lesson-navigation .glide,
+    .glide__slides {
+        width: 100% !important;
+    }
+    .glide .bg-image {
+        background-size: 100% 100%;
+    }
+    .glide__slide {
+        width: 100% !important;
+
+        margin-right: 15px !important;
+    }
+    .glide .right-control {
+        right: 0 !important;
+    }
+    .glide__track {
+        height: 27.6vh !important;
+    }
+    .glide .left-control {
+        left: 0 !important;
+    }
+    .glide__slides {
+        overflow: visible !important;
+    }
+    .glide__slides li:not(:first-child) {
+        margin-left: 45px !important;
+    }
+}

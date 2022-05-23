@@ -1,0 +1,107 @@
+.about {
+    & p {
+        font: normal normal normal 2.5rem/3.563rem $fira-sans;
+        letter-spacing: 0px;
+        color: $black;
+        padding-top: 4.25rem;
+        text-align: left;
+    }
+    .team-members {
+        padding-top: 9.625rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5.938rem;
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+        .image {
+            height: 42.19rem;
+            & img {
+                width: 100%;
+                height: 100%;
+                @include respond(phone) {
+                    object-fit: cover;
+                }
+            }
+        }
+        .desc {
+            & h3 {
+                text-align: left;
+                font: normal normal bold 3.75rem/4.438rem $fira-sans;
+                letter-spacing: 0px;
+                color: $dark-gray;
+            }
+            .green-line {
+                margin-top: 3.563rem;
+                border-bottom: 0.3125rem solid $dark-green;
+                width: 18.88rem;
+                margin-bottom: 2.313rem;
+            }
+            & p {
+                text-align: left;
+                font: normal normal normal 2rem/ 3rem $fira-sans;
+                letter-spacing: 0px;
+                color: $black;
+                padding-top: 0;
+            }
+        }
+    }
+    .team {
+        padding-top: 4.375rem;
+        & h2 {
+            font: normal normal bold 5.313rem/6.25rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+        & p {
+            text-align: left;
+            font: normal normal normal 1.875rem/2.688rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+        .team-grid {
+            padding-top: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.75rem;
+            padding-bottom: 4.5rem;
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+            }
+            &_member {
+                @include respond(phone) {
+                    margin-bottom: 5rem;
+                }
+                .image {
+                    height: 33rem;
+                    & img {
+                        height: 100%;
+                        width: 100%;
+                        @include respond(phone) {
+                            object-fit: cover;
+                        }
+                    }
+                }
+                & h3 {
+                    padding-top: 2.063rem;
+                    text-align: left;
+                    font: normal normal bold 2.75rem/3.25rem $fira-sans;
+                    letter-spacing: 0px;
+                    color: $dark-gray;
+                }
+                .green-line {
+                    margin-top: 1.188rem;
+                    border-bottom: 0.3125rem solid $dark-green;
+                    width: 14.19rem;
+                    margin-bottom: 1.438rem;
+                }
+                & p {
+                    padding-top: 0;
+                    text-align: left;
+                    font: normal normal normal 1.563rem/2.25rem $fira-sans;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+footer {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    padding: 7.063rem 4.25rem 3.875rem 4.25rem !important;
+    background: #0e1810;
+    border: 1px solid #707070;
+    & > div {
+        grid-gap: 5.625rem;
+        align-items: baseline;
+        grid-template-columns: auto auto auto auto;
+        display: grid !important;
+        @include respond(tab-port) {
+            grid-template-columns: auto auto;
+        }
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+
+        & .logo {
+            display: flex;
+            align-items: center;
+            & p {
+                padding-left: 3.125rem;
+                font: normal normal normal 1.875rem/2.688rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+                text-transform: capitalize;
+            }
+        }
+        .follow-contact {
+            & i {
+                font-size: 2.625rem;
+                color: $white;
+                &:first-child {
+                    margin-right: 0.9375rem;
+                }
+            }
+            h3 {
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                font: normal normal bold 2.188rem/3.063rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+                margin-bottom: 0.375rem;
+            }
+            .contact {
+                padding-top: 2.25rem;
+            }
+            & a {
+                font: normal normal normal 1.25rem/1.75rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white !important;
+                text-transform: lowercase;
+            }
+        }
+        .links {
+            & h3 {
+                margin: 0;
+                margin-bottom: 0.375rem;
+                padding: 0;
+                text-align: left;
+                font: normal normal bold 2.188rem/3.063rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+            }
+            & a {
+                display: block;
+                font: normal normal normal 1.563rem/2.25rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+                text-transform: capitalize;
+            }
+        }
+        .email-us {
+            & h3 {
+                margin: 0;
+                margin-bottom: 0.375rem;
+                padding: 0;
+                text-align: left;
+                font: normal normal bold 2.188rem/3.063rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+            }
+            & input {
+                border: 1px solid $white;
+                height: 3.438rem;
+                width: 22.63rem;
+                margin-right: 1.063rem;
+                font: normal normal normal 1.875rem/2.25rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white !important;
+                background-color: transparent;
+                padding: 0.8125rem 0.9375rem;
+                &::placeholder {
+                    color: $white !important;
+                }
+            }
+            & button {
+                padding: 0.6875rem 1.938rem;
+                border-radius: 4px;
+                background: $dark-green 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                border: 0.25rem solid $dark-green;
+                font: normal normal bold 1.625rem/ 2.313rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+            }
+        }
+    }
+    .footer-line {
+        margin-top: 3.188rem;
+        margin-bottom: 0.9375rem;
+        border-bottom: 0.1875rem solid $white;
+    }
+    .rights {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        @include respond(phone) {
+            flex-direction: column;
+            grid-gap: 0;
+        }
+        .rights-reserved{
+            visibility: hidden;
+        }
+        .disclaimer{
+            margin-top:  1.588rem;
+            max-width: 60%;
+        }
+        & p {
+            font: normal normal normal 1.563rem/2.25rem $fira-sans;
+            letter-spacing: 0px;
+            color: $white;
+        }
+        & > div {
+            & span {
+                color: $white;
+                font: normal normal normal 1.563rem/2.25rem $fira-sans;
+            }
+            & a {
+                font: normal normal normal 1.563rem/2.25rem $fira-sans;
+                letter-spacing: 0px;
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}

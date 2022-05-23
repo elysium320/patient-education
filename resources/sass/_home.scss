@@ -1,0 +1,255 @@
+.home-page {
+    padding-top: 4.688rem;
+    text-align: center;
+    padding-bottom: 9.688rem;
+    position: relative;
+    @include respond(phone) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    & br {
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    .pad-top {
+        padding-top: 4.563rem;
+    }
+    .d-grid-content {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        max-width: 93.75rem;
+        margin: auto;
+
+        @include respond(phone) {
+            display: block;
+        }
+        .module-border {
+            border: 2px solid #0e181053;
+            padding: 0.9375rem 0;
+        }
+    }
+    .modules {
+        & h3 {
+            margin-top: 4.25rem;
+            font: normal normal 300 2.5rem/2.938rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+        .modules-page .module .image:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .module {
+            margin-top: 2.313rem;
+            width: 30.38rem;
+            height: auto;
+            display: inline-table;
+            & img {
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.313rem;
+            }
+            & .image {
+                width: 100%;
+                height: 13.19rem;
+                border: 1px solid #0e181053;
+                // border-bottom: none;
+                position: relative;
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                & .lesson-name {
+                    position: absolute;
+                    //white-space: nowrap;
+                    width: 30.38rem;
+                    padding: 10px;
+                    //overflow: hidden;
+                    //text-overflow: ellipsis;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    left: 50%;
+                    font: normal normal bold 3.125rem/3.75rem Helvetica;
+                    letter-spacing: 0px;
+                    color: #fff;
+                }
+            }
+            .lesson-desc {
+                text-align: left;
+                border: 2px solid #0e181053;
+                padding: 0.625rem 1.313rem;
+
+                .caps{
+                    text-transform: uppercase;
+                }
+
+                & .owner {
+                    & span {
+                        font: normal normal normal 1rem/1.438rem $fira-sans;
+                        letter-spacing: 0px;
+                        color: $dark-green;
+                    }
+                }
+            }
+        }
+        & a {
+            margin-top: 6.125rem;
+            display: inline-block;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+    .back-top {
+        position: fixed;
+        display: none;
+        right: 2.688rem;
+        bottom: 1.25rem;
+        .back {
+            width: 5rem;
+            height: 5rem;
+            border: 1px solid #0e1810;
+            border-radius: 7px;
+            padding: 0.9375rem 1.063rem;
+            margin: auto;
+            margin-bottom: 5px;
+            & i {
+                font-size: 3rem;
+            }
+        }
+        & span {
+            font: normal normal 300 1.563rem/2.25rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+    }
+    .help {
+        position: fixed;
+        left: 2.688rem;
+        bottom: 1.25rem;
+        .help-icon {
+            width: 4.938rem;
+            height: 4.938rem;
+            border-radius: 50px;
+            margin: auto;
+            margin-bottom: 5px;
+            & i {
+                font-size: 4.938rem;
+            }
+        }
+        & span {
+            font: normal normal 600 1.563rem/2.25rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+    }
+}
+.main-page {
+    max-width: 98rem;
+    margin: auto;
+    @include respond(tab-land) {
+        max-width: 100% !important;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+    .heading-primary {
+        margin-bottom: 0;
+    }
+    .heading-secondary {
+        font-weight: normal;
+    }
+    .d-grid-content {
+        grid-gap: 1.313rem;
+    }
+    .modules {
+        .module {
+            margin-right: 0 !important;
+            @include respond(phone) {
+                display: block;
+                width: 100%;
+            }
+            & img {
+                height: 13.19rem;
+                @include respond(phone) {
+                    height: 18.19rem;
+                }
+            }
+        }
+        h3 {
+            margin-top: 8.438rem;
+        }
+        .heading-ternary {
+            padding: 0.9375rem 11.56rem;
+            border: 0.125rem solid #0e181053;
+            display: block;
+        }
+    }
+    .home-grid {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3.125rem;
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+        .image {
+            height: 27.63rem;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .description {
+            .default-btn {
+                width: fit-content;
+                margin: 0 auto;
+            }
+            & p {
+                font: normal normal normal 2.5rem/3.563rem $fira-sans;
+                letter-spacing: 0px;
+                color: $black;
+                text-align: left;
+                margin-top: 3.313rem;
+            }
+            .green-line {
+                border-bottom: 0.3125rem solid $dark-green;
+                width: 18.88rem;
+            }
+            & .input-group {
+                overflow: hidden;
+                margin-bottom: 3.313rem;
+                background: $white 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px $dark-gray-2;
+                border: 1px solid $gray2;
+                height: 4.688rem;
+                .input-group-text {
+                    border: none !important;
+                    & i {
+                        font-size: 1.875rem;
+                        color: $gray !important;
+                    }
+                }
+                & input {
+                    border: none !important;
+                    box-shadow: none;
+                    height: 4.5rem;
+                    color: $gray;
+                    font: normal normal normal 1.563rem/ 1.375rem $poppins;
+                    padding: 0;
+                    background: $white;
+                }
+            }
+        }
+    }
+}

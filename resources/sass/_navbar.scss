@@ -1,0 +1,106 @@
+.navbar {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 1.5rem 4.25rem !important;
+    @include respond(phone) {
+        padding: 1.5rem 15px !important;
+    }
+
+    .navbar-brand {
+        font-weight: 600;
+        font: normal normal bold 4.063rem/4.875rem $momcake;
+        letter-spacing: 0px;
+        color: $dark-green;
+    }
+    .navbar-toggler-icon {
+        width: 3.5rem;
+        height: 4rem;
+        & i {
+            font-size: 4rem;
+        }
+    }
+    .navbar-nav .nav-item {
+        .drop-links {
+            background: transparent;
+            width: 100%;
+            text-align: center;
+            border: none;
+        }
+        .dropdown-menu {
+            left: -45px;
+            border: 1px solid black;
+            padding: 0;
+            border-radius: 0;
+            .dropdown-item {
+                text-align: center;
+                border-bottom: 1px solid;
+                &:hover,
+                &:focus {
+                    background-color: $dark-green;
+                    color: $white;
+                }
+            }
+            & button:hover,
+            & button:focus {
+                background-color: $dark-green;
+                color: $white;
+            }
+        }
+        .dropdown-toggle {
+            background: transparent;
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+            & i {
+                color: $black;
+                font-size: 27px;
+            }
+            &::after {
+                display: none;
+            }
+        }
+
+        .user-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $black;
+
+            & img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+        }
+    }
+    .navbar-nav .nav-link {
+        font: normal normal 600 1.875rem/2.688rem $fira-sans;
+        letter-spacing: 0px;
+        color: $black;
+    }
+    .navbar-nav li:not(:last-child) {
+        padding-right: 6.75rem;
+        display: flex;
+        align-items: center;
+    }
+    &.navbar-expand-lg {
+        justify-content: space-between;
+        .navbar-collapse {
+            flex-basis: inherit;
+            flex-grow: inherit;
+        }
+
+        @include respond(phone) {
+            justify-content: flex-end;
+        }
+    }
+}
+// @media screen and (min-width: 1784px) {
+//     .navbar {
+//         max-width:  111.5rem;
+//         padding: 0 !important;
+//     }
+// }

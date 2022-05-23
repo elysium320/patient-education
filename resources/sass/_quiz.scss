@@ -1,0 +1,74 @@
+.quiz-holder {
+    max-width: 95.81rem;
+    margin: auto;
+    text-align: left;
+    display: block;
+    margin-top: 4.188rem;
+    margin-bottom: 6.375rem;
+
+    & .quiz-heading {
+        font: normal normal bold 3.438rem/4.063rem $fira-sans;
+        letter-spacing: 0px;
+        color: $black;
+    }
+    & .default-btn {
+        width: fit-content;
+        margin-top: 1.063rem;
+        display: inline-block;
+    }
+    .default-btn-gold {
+        margin-top: 1.063rem;
+    }
+    .btn-describe {
+        margin-left: 1.313rem;
+        text-align: left;
+        font: normal normal normal 1.563rem/4.063rem Helvetica;
+        letter-spacing: 0px;
+        color: $black;
+    }
+    & .questions {
+        margin-top: 3.438rem;
+        & .question {
+            margin-bottom: 2.375rem;
+            & .form-check-label {
+                font: normal normal normal 2.813rem/4.063rem $fira-sans;
+                letter-spacing: 0px;
+                color: $black;
+                margin-left: 2.563rem;
+            }
+            & .form-check-inline .form-check-input {
+                height: 2.75rem;
+                width: 2.75rem;
+            }
+        }
+    }
+    .final-score {
+        display: flex;
+        align-items: center;
+        @include respond(phone) {
+            display: block;
+        }
+        .modal-title {
+            font: normal normal bold 3.125rem/3.75rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+        }
+        .score-progress {
+            width: 39.19rem;
+            margin-right: 2rem;
+            height: 20.19rem;
+            @include respond(phone) {
+                width: 24.19rem;
+                margin: auto;
+            }
+        }
+        .modal-desc {
+            font: normal normal 300 2.5rem/3.125rem $fira-sans;
+            letter-spacing: 0px;
+            color: $black;
+            margin-top: 1.625rem;
+        }
+    }
+
+
+}
